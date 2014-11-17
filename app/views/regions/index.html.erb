@@ -1,0 +1,4 @@
+<%= render @regions %>
+<% if current_user.admin? %>
+  <%= render "form", region: @region %>
+<% end %>
