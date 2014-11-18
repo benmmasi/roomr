@@ -1,0 +1,4 @@
+<h2>Welcome to <%= @user.email %>'s Page</h2>
+<h3>Personal Statement:</h3>
+<p><%= @user.personal_statement %></p>
+<h4><%= link_to "Edit Profile", edit_user_path(@user) %></h4>

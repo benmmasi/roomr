@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :regions, only: [:create, :show, :index]
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show, :edit, :update]
 
   root "regions#index"
 end
