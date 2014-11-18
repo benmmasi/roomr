@@ -16,6 +16,7 @@ class RegionsController < ApplicationController
 
   def show
     @region = Region.find(params[:id])
+    @users = @region.users
   end
 
   private
