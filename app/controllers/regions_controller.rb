@@ -18,7 +18,7 @@ class RegionsController < ApplicationController
     @region = Region.find(params[:id])
   end
 
- private
+  private
 
   def region_params
     params.require(:region).permit(:name)
