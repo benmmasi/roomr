@@ -29,13 +29,14 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(@user)
+      redirect_to :back
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :personal_statement, :image)
+    params.require(:user).
+      permit(:email, :password, :personal_statement, :image, :region_id)
   end
 end

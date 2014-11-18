@@ -1,1 +1,8 @@
 <h2>Welcome to the <%= @region.name %> page!</h2>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.email %></li>
+  </ul>
+<% end %>
+
+<%= render "regions/join_button", region: @region %>
