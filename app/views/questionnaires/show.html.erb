@@ -1,2 +1,20 @@
 <h2>Answer some questions</h2>
-<%= render @question %>
+<% if @question %>
+  <div>
+      <h3><%= @question.prompt %></h3>
+      <%= form_for @question.responses.new do |form| %>
+        <%= form.hidden_field :question_id %>
+        <div>
+          <%= form.radio_button :positive, "0" %>
+          <%= form.label :true, @question.positive %>
+        </div>
+        <div>
+          <%= form.radio_button :positive, "1" %>
+          <%= form.label :false, @question.negative, for: :negative %>
+        </div>
+        <%= form.submit %>
+      <% end %>
+  </div>
+<% else %>
+  <h3>Questionnaire Complete!</h3>
+<% end %>
