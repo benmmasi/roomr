@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20141119144351) do
   enable_extension "plpgsql"
 
   create_table "questions", force: true do |t|
-    t.string   "prompt"
-    t.string   "category"
-    t.string   "positive"
-    t.string   "negative"
+    t.string   "prompt",     null: false
+    t.string   "categor",    null: false
+    t.string   "positive",   null: false
+    t.string   "negative",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 20141119144351) do
   end
 
   create_table "responses", force: true do |t|
-    t.integer  "question_id"
-    t.integer  "user_id"
-    t.boolean  "positive"
+    t.integer  "question_id", null: false
+    t.integer  "user_id",     null: false
+    t.boolean  "positive",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
