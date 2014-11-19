@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @personal_statement = @user.personal_statement
     @image = @user.image
+    @questionnaire = Questionnaire.new
   end
 
   def edit
