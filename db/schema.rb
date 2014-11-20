@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20141119144351) do
 
   create_table "questions", force: true do |t|
     t.string   "prompt",     null: false
-    t.string   "categor",    null: false
+    t.string   "category",   null: false
     t.string   "positive",   null: false
     t.string   "negative",   null: false
     t.datetime "created_at"
