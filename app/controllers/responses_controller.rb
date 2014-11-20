@@ -1,17 +1,16 @@
 class ResponsesController < ApplicationController
   def new
     @question = Question.find(params[:question_id])
-    @response = @question.response.new
   end
 
   def create
     @response = current_user.responses.new(response_params)
-    if @response.save
-      redirect_to questionnaire_path
-    else
+
+    if !@response.save
       flash[:error] = "Please choose an answer"
-      redirect_to questionnaire_path
     end
+
+    redirect_to questionnaire_path
   end
 
   private
