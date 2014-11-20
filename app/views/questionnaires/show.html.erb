@@ -1,3 +1,8 @@
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+
+
 <h2>Answer some questions</h2>
 <% if @question %>
   <div>
@@ -10,7 +15,7 @@
         </div>
         <div>
           <%= form.radio_button :positive, "1" %>
-          <%= form.label :false, @question.negative, for: :negative %>
+          <%= form.label :false, @question.negative %>
         </div>
         <%= form.submit %>
       <% end %>

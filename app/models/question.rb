@@ -6,4 +6,8 @@ class Question < ActiveRecord::Base
     first_unanswered = all_unanswered.first
     first_unanswered && find(first_unanswered)
   end
+
+  def response_for(user)
+    responses.find_by(user_id: user.id)
+  end
 end

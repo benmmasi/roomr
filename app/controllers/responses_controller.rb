@@ -9,6 +9,7 @@ class ResponsesController < ApplicationController
     if @response.save
       redirect_to questionnaire_path
     else
+      flash[:error] = "Please choose an answer"
       redirect_to questionnaire_path
     end
   end
