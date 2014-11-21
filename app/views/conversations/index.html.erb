@@ -1,0 +1,8 @@
+<h2>Your conversations</h2>
+<ul>
+  <% @messages.each do |message| %>
+    <li>
+      <%= link_to message.sender.email, user_conversation_path(message.sender) %>
+    </li>
+  <% end %>
+</ul>

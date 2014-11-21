@@ -3,3 +3,5 @@
 <h3>Personal Statement:</h3>
 <p><%= @user.personal_statement %></p>
 <h4><%= link_to "Edit Profile", edit_user_path(@user) %></h4>
+<h4>See your <%= link_to "Conversations", conversations_path %></h4>
+<h4>Send <%= link_to @user.email, user_conversation_path(@user) %> a message!</h4>

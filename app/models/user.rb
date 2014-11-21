@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
 
   belongs_to :region
   has_many :responses
+  has_many :messages, foreign_key: :receiver_id
 end

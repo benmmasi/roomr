@@ -1,0 +1,14 @@
+<%= form_for [@other_user, @message] do |form| %>
+  <div>
+    <%= form.hidden_field :receiver_id, value: @other_user.id %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit "Send Message" %>
+  </div>
+<% end %>
