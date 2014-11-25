@@ -8,7 +8,7 @@
 a message!</h4>
 <ul>
   <% @responses.each do |response| %>
-    <% if response.positive == false %>
+    <% if !response.positive %>
     <li>Is <%= response.question.category %></li>
   <% else %>
     <li>Is not <%= response.question.category %></li>
