@@ -4,4 +4,14 @@
 <p><%= @user.personal_statement %></p>
 <h4><%= link_to "Edit Profile", edit_user_path(@user) %></h4>
 <h4>See your <%= link_to "Conversations", conversations_path %></h4>
-<h4>Send <%= link_to @user.email, user_conversation_path(@user) %> a message!</h4>
+<h4>Send <%= link_to @user.email, user_conversation_path(@user) %>
+a message!</h4>
+<ul>
+  <% @responses.each do |response| %>
+    <% if response.positive == false %>
+    <li>Is <%= response.question.category %></li>
+  <% else %>
+    <li>Is not <%= response.question.category %></li>
+    <% end %>
+  <% end %>
+</ul>

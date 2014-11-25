@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @personal_statement = @user.personal_statement
     @image = @user.image
+    @responses = @user.responses.all
   end
 
   def edit
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to :back
+      redirect_to user_path
     end
   end
 
