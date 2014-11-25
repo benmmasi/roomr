@@ -7,11 +7,5 @@
 <h4>Send <%= link_to @user.email, user_conversation_path(@user) %>
 a message!</h4>
 <ul>
-  <% @responses.each do |response| %>
-    <% if !response.positive %>
-    <li>Is <%= response.question.category %></li>
-  <% else %>
-    <li>Is not <%= response.question.category %></li>
-    <% end %>
-  <% end %>
+  <%= render @responses %>
 </ul>
