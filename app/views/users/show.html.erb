@@ -1,11 +1,18 @@
-<h2>Welcome to <%= @user.email %>'s Page</h2>
-<p><%= image_tag @user.image %></p>
-<h3>Personal Statement:</h3>
-<p><%= @user.personal_statement %></p>
-<h4><%= link_to "Edit Profile", edit_user_path(@user) %></h4>
-<h4>See your <%= link_to "Conversations", conversations_path %></h4>
-<h4>Send <%= link_to @user.email, user_conversation_path(@user) %>
-a message!</h4>
+<div id="container">
+  <div id="profile">
+    <h2><%= @user.email %>'s Page</h2>
+    <p><%= image_tag @user.image %></p>
+    <h3>Personal Statement:</h3>
+    <p><%= @user.personal_statement %></p>
+    <h4>Send <%= link_to @user.email, user_conversation_path(@user) %>
+    a message!</h4>
+  </div>
 <ul>
   <%= render @responses %>
 </ul>
+
+<% if @user == current_user %>
+    <h4><%= link_to "Edit Profile", edit_user_path(@user) %></h4>
+    <h4>See your <%= link_to "Conversations", conversations_path %></h4>
+  <% end %>
+</div>
