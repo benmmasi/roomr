@@ -1,2 +1,7 @@
-<h2>You are editing <%= @user.email %></h2>
-<%= render "form", user: @user %>
+<div id="container">
+  <div id=profile>
+    <img id="zombiemirror" src="/assets/zombie_mirror.jpg" alt="Zombie Mirror">
+    <h2>Edit Your Profile</h2>
+    <%= render "form", user: @user %>
+  </div>
+</div>

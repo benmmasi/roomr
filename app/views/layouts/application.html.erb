@@ -11,9 +11,12 @@
   <h1>roomr</h1>
     <% if signed_in? %>
       <%= link_to current_user.email, current_user %>
-      <%= link_to "Sign Out", session_path, method: :delete %>
-      <%= link_to "Questions", questionnaire_path %>
-      <%= link_to "Regions", regions_path %>
+</div>
+      <%= link_to "Sign Out | ", session_path, method: :delete %>
+      <%= link_to "Answer Some Questions | ", questionnaire_path %>
+      <%= link_to "Join a City | ", regions_path %>
+      <%= link_to "Your Conversations | ", conversations_path %>
+      <%= link_to "Edit Your Profile", edit_user_path(current_user) %>
         <% else %>
       <%= link_to "Sign In", new_session_path %>
       <%= link_to "Sign Up", new_user_path %>

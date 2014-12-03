@@ -1,8 +1,22 @@
-<h2>Welcome to the <%= @region.name %> page!</h2>
-<ul>
-  <% @users.each do |user| %>
-    <li><%= link_to user.email, user_path(user) %></li>
-  </ul>
-<% end %>
+<div id="container">
+  <div id="regionshow">
+    <h2>Welcome to <%= @region.name %>!</h2>
+    <% if current_user.region == @region %>
+      <p>(You're looking here)</p>
+    <% end %>
+    
+    <br />
+    <h3>Members</h3>
+    <ul id="regionmemberlist">
+      <% @users.each do |user| %>
+        <% if user != current_user %>
+          <li><%= link_to user.email, user %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  <br />
+    <%= render "regions/join_button", region: @region %>
+    <img id="cityshow" src="<%= asset_path "zombie_apocalypse.jpg" %>" alt="Zombie Apocalypse">
+  </div>
+</div>
 
-<%= render "regions/join_button", region: @region %>

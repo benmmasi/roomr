@@ -1,10 +1,13 @@
 <div id="container">
-  <div id="content"
-    <p>
-<%= render @regions %>
-<% if current_user.admin? %>
-  <%= render "form", region: @region %>
-  </p>
-<% end %>
-</div>
+  <div id="regionmain">
+    <ul>
+      <h3><%= render @regions %></h3>
+    </ul>
+    </br>
+      <% if current_user.admin? %>
+        <%= render "form", region: @region %>
+      <% end %>
+    </br>
+    <img src="<%= asset_path "assets/zombie_city_1.jpg" %>" alt="Zombie City">
+  </div>
 </div>

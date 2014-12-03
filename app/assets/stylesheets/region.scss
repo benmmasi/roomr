@@ -1,0 +1,33 @@
+#regionmain {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#regionmain ul li {
+  display: inline;
+}
+
+#regionmain li + li::before {
+  content: " | ";
+}
+
+img {
+  @include span-columns(10);
+  @include shift(1);
+  height: 500px;
+}
+
+#regionshow {
+  @include span-columns(6);
+  @include shift(3);
+  margin-top: 100px;
+}
+
+#regionmemberlist {
+  list-style-type: none;
+}
+
+#cityshow {
+  @include span-columns(10);
+  height: 700px;
+}

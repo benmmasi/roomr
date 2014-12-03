@@ -1,20 +1,27 @@
-<% if @question %>
-<h2>Answer some questions</h2>
- <div>
-      <h3><%= @question.prompt %></h3>
-      <%= form_for @question.responses.new do |form| %>
-        <%= form.hidden_field :question_id %>
+<div id="container">
+  <div id="background">
+    <div id="questionnaire">
+      <% if @question %>
+        <h2>Answer some questions:</h2>
+      </br>
+      <div>
+        <h3><%= @question.prompt %></h3>
+        <%= form_for @question.responses.new do |form| %>
+          <%= form.hidden_field :question_id %>
         <div>
           <%= form.radio_button :positive, "0" %>
-          <%= form.label :true, @question.positive %>
+          <h4><%= form.label :true, @question.positive %></h4>
         </div>
         <div>
           <%= form.radio_button :positive, "1" %>
-          <%= form.label :false, @question.negative %>
+          <h4><%= form.label :false, @question.negative %></h4>
         </div>
-        <%= form.submit %>
+        <%= form.submit "Answer!"%>
       <% end %>
+      </div>
+    <% else %>
+        <h3>Questionnaire Complete!</h3>
+    <% end %>
+    </div>
   </div>
-<% else %>
-  <h3>Questionnaire Complete!</h3>
-<% end %>
+</div>

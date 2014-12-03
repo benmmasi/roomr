@@ -1,13 +1,13 @@
-<%= form_for user do |form| %>
-  <div>
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
+  <%= form_for user do |form| %>
+    <div>
+      <%= form.label :image %>
+      <%= form.text_field :image %>
+    </div>
 
-  <div>
-    <%= form.label :personal_statement %>
-    <%= form.text_area :personal_statement %>
-  </div>
+    <div>
+      <%= form.label :personal_statement %>
+      <%= form.text_area :personal_statement %>
+    </div>
 
-  <%= form.submit %>
-<% end %>
+    <%= form.submit %>
+  <% end %>

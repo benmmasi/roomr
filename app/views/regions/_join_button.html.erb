@@ -1,6 +1,7 @@
 <% if current_user.region != region %>
   <%= form_for current_user do |form| %>
+    <input type="hidden" name="back" value="true" />
     <%= form.hidden_field :region_id, value: @region.id %>
-    <%= form.submit "Join Region!" %>
+    <%= form.submit "Join City!" %>
   <% end %>
 <% end %>

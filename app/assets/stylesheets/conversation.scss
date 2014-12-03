@@ -1,0 +1,17 @@
+#conversation {
+  @include span-columns(5);
+  float: left;
+  margin-top: 100px;
+}
+
+#conversation img {
+  @include span-columns(6);
+  float: right;
+}
+
+#talkingdead {
+  @include span-columns(6);
+  margin-top: 100px;
+  float: right;
+}
+
