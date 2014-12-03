@@ -10,7 +10,7 @@ class Message < ActiveRecord::Base
           user1: user1.id, user2: user2.id).order(:created_at)
   end
 
-  def self.by_or_from(user)
+  def self.to_or_from(user)
     where("sender_id = :id OR receiver_id = :id", id: user.id)
   end
 end

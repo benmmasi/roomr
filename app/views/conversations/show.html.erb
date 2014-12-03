@@ -1,8 +1,21 @@
-<h2>Conversation</h2>
-<ul>
-  <% @messages.each do |message| %>
-    <li><%= message.sender.email %> - <%= message.body %></li>
-  <% end %>
-</ul>
+<div id="container">
+  <div id="conversation">
+    <h2>Conversation with <%= @other_user.email %></h2>
+    </br>
+    <ul>
+      <% @messages.each do |message| %>
+        <% if message.sender != current_user %>
+        <li><b><%= message.sender.email %></b> - <%= message.body %></li>
+    <% else %>
+        <li><b>Me</b> - <%= message.body %></li>
+    <% end %>
+    <% end %>
+    </ul>
+    </br>
+    <%= render "messages/form" %>
+  </div>
 
-<%= render "messages/form" %>
+  <div id="talkingdead">
+    <img src="/assets/zombie_convo.jpg" alt="Talking Dead">
+  </div>
+</div>

@@ -1,6 +1,7 @@
 class ConversationsController < ApplicationController
   def index
-    @messages = Message.by_or_from(current_user)
+    @users = User.communicated_with(current_user)
+    @messages = Message.to_or_from(current_user)
   end
 
   def show

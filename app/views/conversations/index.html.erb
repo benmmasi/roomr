@@ -1,8 +1,15 @@
-<h2>Your conversations</h2>
-<ul>
-  <% @messages.each do |message| %>
-    <li>
-      <%= link_to message.sender.email, user_conversation_path(message.sender) %>
-    </li>
-  <% end %>
-</ul>
+<div id="container">
+  <div id="conversation">
+    <h2>Your conversations</h2>
+    <ul>
+      <% @users.each do |user| %>
+        <li>
+      <%= link_to user.email, user_conversation_path(user) %>
+      </li>
+    <% end %>
+    </div>
+    <div id="talkingdead">
+      <img src="/assets/zombie_convo.jpg" alt="Talking Dead">
+    </div>
+  </ul>
+</div>

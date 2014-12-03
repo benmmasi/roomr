@@ -1,5 +1,5 @@
 <% if response.positive? %>
-  <li>Is not <%= response.question.category %></li>
+  <li>not <%= response.question.category %></li>
 <% else %>
-  <li>Is <%= response.question.category %></li>
+  <li><%= response.question.category %></li>
 <% end %>
