@@ -10,13 +10,13 @@
     <ul id="regionmemberlist">
       <% @users.each do |user| %>
         <% if user != current_user %>
-          <li><%= link_to user.email, user_path(user) %></li>
+          <li><%= link_to user.email, user %></li>
         <% end %>
       <% end %>
     </ul>
   <br />
     <%= render "regions/join_button", region: @region %>
-    <img id="cityshow" src="/assets/zombie_apocalypse.jpg" alt="Zombie Apocalypse">
+    <img id="cityshow" src="<%= asset_path "zombie_apocalypse.jpg" %>" alt="Zombie Apocalypse">
   </div>
 </div>
 

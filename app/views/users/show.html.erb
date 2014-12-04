@@ -4,17 +4,18 @@
     <p><%= image_tag @user.image %></p>
     <h3>Personal Statement:</h3>
     <p><%= @user.personal_statement %></p>
-   
+
     <% if @user != current_user %>
       <p>Send <%= link_to @user.email, user_conversation_path(@user) %>
-      a message!</p>
-    <% end %>
-    
-    <h3><%= @user.email %> is:</h3>
+  a message!</p>
+  <% end %>
 
+    <% if @user.responses.any? %>
+      <h3><%= @user.email %> is:</h3>
     <ul>
       <%= render @responses %>
     </ul>
+  <% end %>
 
   </div>
 </div>
