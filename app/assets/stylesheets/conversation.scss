@@ -5,14 +5,13 @@
 }
 
 #conversation img {
+  @include span-columns(6);
   float: right;
-  width: 600px;
 }
 
 #talkingdead {
+  @include span-columns(6);
   margin-top: 100px;
-  margin-right: 100px;
   float: right;
-  width: 600px;
 }
 

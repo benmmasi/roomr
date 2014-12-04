@@ -12,7 +12,8 @@
 }
 
 img {
-  width: 1200px;
+  @include span-columns(10);
+  @include shift(1);
   height: 500px;
 }
 
@@ -27,6 +28,6 @@ img {
 }
 
 #cityshow {
-  width: 500px;
-  height: 600px;
+  @include span-columns(10);
+  height: 700px;
 }
