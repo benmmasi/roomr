@@ -4,11 +4,10 @@
       <h3><%= render @regions %></h3>
     </ul>
     </br>
-  <% if current_user.admin? %>
-    <%= render "form", region: @region %>
-  <% end %>
-  </br>
-  <img src="assets/zombie_city_1.jpg" alt="Zombie City">
- 
+      <% if current_user.admin? %>
+        <%= render "form", region: @region %>
+      <% end %>
+    </br>
+    <img src="assets/zombie_city_1.jpg" alt="Zombie City">
   </div>
 </div>

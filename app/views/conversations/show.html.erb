@@ -5,11 +5,11 @@
     <ul>
       <% @messages.each do |message| %>
         <% if message.sender != current_user %>
-        <li><b><%= message.sender.email %></b> - <%= message.body %></li>
-    <% else %>
-        <li><b>Me</b> - <%= message.body %></li>
-    <% end %>
-    <% end %>
+          <li><b><%= message.sender.email %></b> - <%= message.body %></li>
+        <% else %>
+          <li><b>Me</b> - <%= message.body %></li>
+        <% end %>
+      <% end %>
     </ul>
     </br>
     <%= render "messages/form" %>
