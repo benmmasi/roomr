@@ -2,7 +2,7 @@
   @include span-columns(8);
   @include shift(2);
   margin-top: 100px;
-  background-image: url("<%= asset_path "zombie_questions.jpg" %>");
+  background-image: image-url(""zombie_questions.jpg");
   height: 600px;
 }
 
