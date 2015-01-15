@@ -10,17 +10,17 @@
           <%= form.hidden_field :question_id %>
         <div>
           <%= form.radio_button :positive, "0" %>
-          <h4><%= form.label :true, @question.positive %></h4>
+          <h5><%= form.label :true, @question.positive %></h5>
         </div>
         <div>
           <%= form.radio_button :positive, "1" %>
-          <h4><%= form.label :false, @question.negative %></h4>
+          <h5><%= form.label :false, @question.negative %></h5>
         </div>
         <%= form.submit "Answer!"%>
       <% end %>
       </div>
     <% else %>
-        <h3>Questionnaire Complete!</h3>
+      <h2>Questionnaire Complete!</h2>
     <% end %>
     </div>
   </div>

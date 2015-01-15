@@ -2,8 +2,9 @@
   @include span-columns(8);
   @include shift(2);
   margin-top: 100px;
-  background-image: url(<%= asset_path "zombie_questions.jpg" %>);
+  background-image: url(<%= asset_path "zombie_background_2.jpg" %>);
   height: 600px;
+  background-size: contain;
 }
 
 #questionnaire {
@@ -11,9 +12,19 @@
   @include shift(2);
 
   margin-top: 100px;
-  color: green;
 }
 
 #questionnaire h2 {
-  color: #D92500;
+  color: red;
 }
+
+
+#questionnaire h3 {
+  color: white;
+}
+
+#questionnaire h5 {
+  color: white;
+}
+
+
